@@ -7,18 +7,37 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <artifactId>cloud-consumer-hystrix-dashboard9001</artifactId>
-    <packaging>war</packaging>
-    <name>cloud-consumer-hystrix-dashboard9001 Maven Webapp</name>
-    <url>http://maven.apache.org</url>
+
+
+
+
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
-    <build>
-        <finalName>cloud-consumer-hystrix-dashboard9001</finalName>
-    </build>
+
+
 </project>

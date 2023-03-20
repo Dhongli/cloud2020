@@ -6,7 +6,26 @@
         <artifactId>cloud2020</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+
     <artifactId>cloud-api-commons</artifactId>
-    <name>Archetype - cloud-api-commons</name>
-    <url>http://maven.apache.org</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.11</version>
+        </dependency>
+    </dependencies>
+
 </project>

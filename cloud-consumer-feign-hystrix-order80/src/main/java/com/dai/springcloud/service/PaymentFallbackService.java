@@ -1,17 +1,17 @@
 package com.dai.springcloud.service;
 
-import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 
-@Component
-@FeignClient(value = "CLOUD-PROVIDER-HYSTRIX-PAYMENT")
-public interface PaymentHystrixService {
-    @GetMapping("/payment/hystrix/ok/{id}")
-    String paymentInfo_OK(@PathVariable("id") Integer id);
+@Component //必须加 //必须加 //必须加
+public class PaymentFallbackService implements PaymentHystrixService{
+    @Override
+    public String paymentInfo_OK(Integer id) {
+        return "------PaymentFallbackService fall back-paymentInfo_OK, ";
+    }
 
-    @GetMapping("/payment/hystrix/timeout/{id}")
-    String paymentInfo_TimeOut(@PathVariable("id") Integer id);
+    @Override
+    public String paymentInfo_TimeOut(Integer id) {
+        return "------PaymentFallbackService fall back-paymentInfo_TimeOut";
+    }
 }

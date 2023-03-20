@@ -1,4 +1,4 @@
-package entities;
+package com.dai.springcloud.entities;
 
 public class CommonResult<T> {
     private Integer code;
